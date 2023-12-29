@@ -157,6 +157,11 @@ bash <(curl -sL https://s.apache.org/openwhisk.sh) &&
  AUTH=$(docker exec openwhisk wsk property get --auth | awk '{print $3}')&& wsk property set --auth $AUTH --apihost http://localhost:3233
 ```
 
+```shell
+#stop openwhisk
+docker exec openwhisk stop
+```
+
 I recommended to use bash for deploy openwhisk (its so simple) 
 
 `NOTE`: for use openwhisk with bash need docker, be sure first docker is install on your system.
