@@ -6,7 +6,10 @@ const dbUrl = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${p
 async function connectDB() {
   try {
     mongoose.set('strictQuery', false);
-    await mongoose.connect(dbUrl);
+    await mongoose.connect(dbUrl, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    });
     console.log('database connected successfully...');
   } catch (error) {
     console.log("connection error...!\n");
@@ -14,4 +17,4 @@ async function connectDB() {
     process.exit(1)
   }
 };
-module.exports.connectDB = connectDB;
+module.exports = { connectDB };

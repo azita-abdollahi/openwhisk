@@ -13,4 +13,4 @@ const registerSchema = Joi.object({
         .valid(Joi.ref('password'))
         .required(),
 });
-  module.exports = { registerSchema }
+  module.exports = registerSchema;

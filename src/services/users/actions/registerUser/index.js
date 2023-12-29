@@ -1,23 +1,26 @@
 const User = require('./model/user.model');
-const userRegisterSchema = require('./userCreate.schema')
-const validate  = require('./middleware/validate');
+const registerSchema = require('./userCreate.schema')
+const validate = require('./middleware/validate');
+require('dotenv').config();
+let { connectDB } = require('./utils/mongoDBConnect/index');
 
 async function main(params) {
-  try {
-    validate(userRegisterSchema, params.create);
-    
-    const user = new User(
-      {
-          name: params.create.name,
-          password: params.create.password
-      }
-    );
-    await user.save();
-    return { user };
-  } catch (err) {
-    console.log(err);
-    throw err;
-  }
+ try {
+   await connectDB();
+   validate(registerSchema, params.create);
+   
+   const user = new User(
+     {
+         username: params.create.username,
+         password: params.create.password
+     }
+   );
+   const savedUser = await user.save();
+   return { user: savedUser };
+ } catch (err) {
+   console.log(err);
+   throw err;
+ }
 }
 
 exports.main = main;

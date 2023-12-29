@@ -1,0 +1,7 @@
+{
+    "create": {
+        "username": "test",
+        "password": "12345678",
+        "passwordConfirm": "12345678"
+    }
+}
