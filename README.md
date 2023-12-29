@@ -12,4 +12,11 @@ Moreover, OpenWhisk stands on the shoulders of giants, including Nginx, Kafka, D
 
 Finally, OpenWhisk offers a rich programming model for creating serverless APIs from functions, composing functions into serverless workflows, and connecting events to functions using rules and triggers. It also integrates easily with many popular services using Packages, which are provided either as independently developed projects under the OpenWhisk family or as part of the default Catalog [2](https://openwhisk.apache.org/).
 
-for getting start with openwhisk read docs.
+for getting start with openwhisk read [getting-start](https://github.com/azita-abdollahi/openwhisk/blob/master/docs/getting-start.md).
+for run nodejs action read [actionGuide](https://github.com/azita-abdollahi/openwhisk/blob/master/docs/actionGuide.md).
+
+**Reference**:
+
+  https://openwhisk.apache.org/
+
+  https://openwhisk.apache.org/documentation.html
