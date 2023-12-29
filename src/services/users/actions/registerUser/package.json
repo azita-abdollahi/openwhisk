@@ -1,0 +1,16 @@
+{
+    "name": "registeruser",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "dotenv": "16.3.1",
+      "mongoose": "8.0.3",
+      "joi": "17.9.2",
+      "openwhisk": "3.21.7",
+      "redis": "4.6.12"
+    }
+  }
