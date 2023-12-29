@@ -158,6 +158,7 @@ bash <(curl -sL https://s.apache.org/openwhisk.sh) &&
 ```
 
 I recommended to use bash for deploy openwhisk (its so simple) 
+
 `NOTE`: for use openwhisk with bash need docker, be sure first docker is install on your system.
 
 ## References
